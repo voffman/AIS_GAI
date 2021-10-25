@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		45AF57A6DC65BC5DC7F1867E /* Pods_AIS_GAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF63EED54BC639EF2DD676E /* Pods_AIS_GAI.framework */; };
+		8425DA6D2724526700F5AEDE /* DbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425DA6C2724526700F5AEDE /* DbManager.swift */; };
 		846CDD41271F05480066189D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CDD40271F05480066189D /* AppDelegate.swift */; };
 		846CDD43271F05480066189D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CDD42271F05480066189D /* SceneDelegate.swift */; };
 		846CDD45271F05480066189D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CDD44271F05480066189D /* MainVC.swift */; };
@@ -24,6 +25,9 @@
 		846CDD69271F24D40066189D /* FineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CDD68271F24D40066189D /* FineModel.swift */; };
 		846CDD6B271F24E60066189D /* VehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CDD6A271F24E60066189D /* VehicleModel.swift */; };
 		846CDD6D271F24F40066189D /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CDD6C271F24F40066189D /* NoteModel.swift */; };
+		849A18D927221A320006CF45 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A18D827221A320006CF45 /* DateManager.swift */; };
+		849A18DE2722C9860006CF45 /* NotesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A18DD2722C9860006CF45 /* NotesDetailView.swift */; };
+		849A18E32722D1D30006CF45 /* NotesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A18E22722D1D30006CF45 /* NotesDetailVC.swift */; };
 		84B8118A272051D2002E84C3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B81189272051D2002E84C3 /* MainView.swift */; };
 		84B8118C272051E2002E84C3 /* FinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8118B272051E2002E84C3 /* FinesView.swift */; };
 		84B8118E272051F3002E84C3 /* VehiclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8118D272051F3002E84C3 /* VehiclesView.swift */; };
@@ -32,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		49805AE3F563B58060F7EED8 /* Pods-AIS_GAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIS_GAI.debug.xcconfig"; path = "Target Support Files/Pods-AIS_GAI/Pods-AIS_GAI.debug.xcconfig"; sourceTree = "<group>"; };
+		8425DA6C2724526700F5AEDE /* DbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbManager.swift; sourceTree = "<group>"; };
 		846CDD3D271F05480066189D /* AIS_GAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIS_GAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846CDD40271F05480066189D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846CDD42271F05480066189D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +55,9 @@
 		846CDD68271F24D40066189D /* FineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FineModel.swift; sourceTree = "<group>"; };
 		846CDD6A271F24E60066189D /* VehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleModel.swift; sourceTree = "<group>"; };
 		846CDD6C271F24F40066189D /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		849A18D827221A320006CF45 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		849A18DD2722C9860006CF45 /* NotesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailView.swift; sourceTree = "<group>"; };
+		849A18E22722D1D30006CF45 /* NotesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailVC.swift; sourceTree = "<group>"; };
 		84B81189272051D2002E84C3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		84B8118B272051E2002E84C3 /* FinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinesView.swift; sourceTree = "<group>"; };
 		84B8118D272051F3002E84C3 /* VehiclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesView.swift; sourceTree = "<group>"; };
@@ -120,12 +128,10 @@
 		846CDD54271F05480066189D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				846CDD59271F14BC0066189D /* TableViewCells */,
 				846CDD46271F05480066189D /* Main.storyboard */,
-				84B81189272051D2002E84C3 /* MainView.swift */,
-				84B8118B272051E2002E84C3 /* FinesView.swift */,
-				84B8118D272051F3002E84C3 /* VehiclesView.swift */,
-				84B8118F2720523C002E84C3 /* NotesView.swift */,
+				849A18DF2722D1360006CF45 /* MainViews */,
+				849A18DA2722C8230006CF45 /* DetailViews */,
+				846CDD59271F14BC0066189D /* TableViewCells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,11 +149,8 @@
 		846CDD56271F05480066189D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				846CDD44271F05480066189D /* MainVC.swift */,
-				846CDD60271F21290066189D /* FinesVC.swift */,
-				846CDD62271F213F0066189D /* VehiclesVC.swift */,
-				846CDD64271F21630066189D /* NotesVC.swift */,
-				846CDD66271F217D0066189D /* MapVC.swift */,
+				849A18E12722D1920006CF45 /* DetailControllers */,
+				849A18E02722D17A0006CF45 /* MainControllers */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +170,8 @@
 		846CDD58271F05480066189D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				849A18D827221A320006CF45 /* DateManager.swift */,
+				8425DA6C2724526700F5AEDE /* DbManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -179,6 +184,45 @@
 				846CDD5E271F1A100066189D /* NoteCell.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		849A18DA2722C8230006CF45 /* DetailViews */ = {
+			isa = PBXGroup;
+			children = (
+				849A18DD2722C9860006CF45 /* NotesDetailView.swift */,
+			);
+			path = DetailViews;
+			sourceTree = "<group>";
+		};
+		849A18DF2722D1360006CF45 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				84B81189272051D2002E84C3 /* MainView.swift */,
+				84B8118B272051E2002E84C3 /* FinesView.swift */,
+				84B8118D272051F3002E84C3 /* VehiclesView.swift */,
+				84B8118F2720523C002E84C3 /* NotesView.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		849A18E02722D17A0006CF45 /* MainControllers */ = {
+			isa = PBXGroup;
+			children = (
+				846CDD44271F05480066189D /* MainVC.swift */,
+				846CDD60271F21290066189D /* FinesVC.swift */,
+				846CDD62271F213F0066189D /* VehiclesVC.swift */,
+				846CDD64271F21630066189D /* NotesVC.swift */,
+				846CDD66271F217D0066189D /* MapVC.swift */,
+			);
+			path = MainControllers;
+			sourceTree = "<group>";
+		};
+		849A18E12722D1920006CF45 /* DetailControllers */ = {
+			isa = PBXGroup;
+			children = (
+				849A18E22722D1D30006CF45 /* NotesDetailVC.swift */,
+			);
+			path = DetailControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,12 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8425DA6D2724526700F5AEDE /* DbManager.swift in Sources */,
+				849A18D927221A320006CF45 /* DateManager.swift in Sources */,
 				846CDD69271F24D40066189D /* FineModel.swift in Sources */,
 				84B8118A272051D2002E84C3 /* MainView.swift in Sources */,
 				846CDD5D271F1A030066189D /* VehicleCell.swift in Sources */,
 				846CDD65271F21630066189D /* NotesVC.swift in Sources */,
 				846CDD45271F05480066189D /* MainVC.swift in Sources */,
 				84B8118C272051E2002E84C3 /* FinesView.swift in Sources */,
+				849A18E32722D1D30006CF45 /* NotesDetailVC.swift in Sources */,
 				846CDD61271F21290066189D /* FinesVC.swift in Sources */,
 				846CDD6D271F24F40066189D /* NoteModel.swift in Sources */,
 				846CDD63271F213F0066189D /* VehiclesVC.swift in Sources */,
@@ -310,6 +357,7 @@
 				84B811902720523C002E84C3 /* NotesView.swift in Sources */,
 				84B8118E272051F3002E84C3 /* VehiclesView.swift in Sources */,
 				846CDD5F271F1A100066189D /* NoteCell.swift in Sources */,
+				849A18DE2722C9860006CF45 /* NotesDetailView.swift in Sources */,
 				846CDD43271F05480066189D /* SceneDelegate.swift in Sources */,
 				846CDD6B271F24E60066189D /* VehicleModel.swift in Sources */,
 				846CDD5B271F19C00066189D /* FineCell.swift in Sources */,

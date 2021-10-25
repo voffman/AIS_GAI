@@ -10,7 +10,7 @@ import UIKit
 class FineCell: UITableViewCell {
 
     @IBOutlet weak var fineTitleLabel: UILabel!
-    @IBOutlet weak var fineDataLabel: UILabel!
+    @IBOutlet weak var fineDateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

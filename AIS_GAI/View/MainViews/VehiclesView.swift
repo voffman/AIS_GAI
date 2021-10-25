@@ -11,7 +11,6 @@ class VehiclesView: UIView {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     func configureView(){
         
     }

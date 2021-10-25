@@ -10,7 +10,7 @@ import UIKit
 class VehicleCell: UITableViewCell {
 
     @IBOutlet weak var vehicleTitleLabel: UILabel!
-    @IBOutlet weak var vehicleDataLabel: UILabel!
+    @IBOutlet weak var vehicleDateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

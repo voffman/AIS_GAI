@@ -18,6 +18,5 @@ class FineModel: Object {
     @Persisted var driverLicenseNumber: String?
     @Persisted var photo: String?
     @Persisted var specialMark: String?
-
     
 }
