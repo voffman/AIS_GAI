@@ -18,7 +18,7 @@ class NotesVC: UIViewController {
     let dateManager = DateManager()
     
     let realm = try! Realm()
-    let results = try! Realm().objects(NoteModel.self)//.sorted(byKeyPath: "date")
+    let results = try! Realm().objects(NoteModel.self).sorted(byKeyPath: "date", ascending: false)
     
     var notificationToken: NotificationToken?
     
