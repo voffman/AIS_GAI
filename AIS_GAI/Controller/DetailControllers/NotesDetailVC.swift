@@ -19,7 +19,6 @@ class NotesDetailVC: UIViewController {
     
     var noteModel = NoteModel()
     let dateManager = DateManager()
-    let dbManager = DbManager()
     
     private var notesDetailView: NotesDetailView!{
         guard isViewLoaded else { return nil }

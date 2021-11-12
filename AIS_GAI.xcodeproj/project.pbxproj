@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		45AF57A6DC65BC5DC7F1867E /* Pods_AIS_GAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF63EED54BC639EF2DD676E /* Pods_AIS_GAI.framework */; };
-		8425DA6D2724526700F5AEDE /* DbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425DA6C2724526700F5AEDE /* DbManager.swift */; };
+		841F7489272ABE2100761F13 /* FinesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F7488272ABE2100761F13 /* FinesDetailView.swift */; };
+		841F748B272ABE5000761F13 /* FinesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F748A272ABE5000761F13 /* FinesDetailVC.swift */; };
 		846CDD41271F05480066189D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CDD40271F05480066189D /* AppDelegate.swift */; };
 		846CDD43271F05480066189D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CDD42271F05480066189D /* SceneDelegate.swift */; };
 		846CDD45271F05480066189D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CDD44271F05480066189D /* MainVC.swift */; };
@@ -32,11 +33,16 @@
 		84B8118C272051E2002E84C3 /* FinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8118B272051E2002E84C3 /* FinesView.swift */; };
 		84B8118E272051F3002E84C3 /* VehiclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8118D272051F3002E84C3 /* VehiclesView.swift */; };
 		84B811902720523C002E84C3 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8118F2720523C002E84C3 /* NotesView.swift */; };
+		84C1D246273D442C00C20DF4 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1D245273D442C00C20DF4 /* ImageExtension.swift */; };
+		84EFF16E272AD9AF000693C2 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EFF16D272AD9AF000693C2 /* ImagePickerManager.swift */; };
+		84EFF174272B4BCD000693C2 /* VehiclesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EFF173272B4BCD000693C2 /* VehiclesDetailView.swift */; };
+		84EFF176272B4E6E000693C2 /* VehiclesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EFF175272B4E6E000693C2 /* VehiclesDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49805AE3F563B58060F7EED8 /* Pods-AIS_GAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIS_GAI.debug.xcconfig"; path = "Target Support Files/Pods-AIS_GAI/Pods-AIS_GAI.debug.xcconfig"; sourceTree = "<group>"; };
-		8425DA6C2724526700F5AEDE /* DbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbManager.swift; sourceTree = "<group>"; };
+		841F7488272ABE2100761F13 /* FinesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinesDetailView.swift; sourceTree = "<group>"; };
+		841F748A272ABE5000761F13 /* FinesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinesDetailVC.swift; sourceTree = "<group>"; };
 		846CDD3D271F05480066189D /* AIS_GAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIS_GAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846CDD40271F05480066189D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846CDD42271F05480066189D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +68,10 @@
 		84B8118B272051E2002E84C3 /* FinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinesView.swift; sourceTree = "<group>"; };
 		84B8118D272051F3002E84C3 /* VehiclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesView.swift; sourceTree = "<group>"; };
 		84B8118F2720523C002E84C3 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		84C1D245273D442C00C20DF4 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		84EFF16D272AD9AF000693C2 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		84EFF173272B4BCD000693C2 /* VehiclesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesDetailView.swift; sourceTree = "<group>"; };
+		84EFF175272B4E6E000693C2 /* VehiclesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesDetailVC.swift; sourceTree = "<group>"; };
 		A79294C23F8B47905185534F /* Pods-AIS_GAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIS_GAI.release.xcconfig"; path = "Target Support Files/Pods-AIS_GAI/Pods-AIS_GAI.release.xcconfig"; sourceTree = "<group>"; };
 		ABF63EED54BC639EF2DD676E /* Pods_AIS_GAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIS_GAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -171,7 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				849A18D827221A320006CF45 /* DateManager.swift */,
-				8425DA6C2724526700F5AEDE /* DbManager.swift */,
+				84EFF16D272AD9AF000693C2 /* ImagePickerManager.swift */,
+				84C1D245273D442C00C20DF4 /* ImageExtension.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -190,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				849A18DD2722C9860006CF45 /* NotesDetailView.swift */,
+				841F7488272ABE2100761F13 /* FinesDetailView.swift */,
+				84EFF173272B4BCD000693C2 /* VehiclesDetailView.swift */,
 			);
 			path = DetailViews;
 			sourceTree = "<group>";
@@ -221,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				849A18E22722D1D30006CF45 /* NotesDetailVC.swift */,
+				841F748A272ABE5000761F13 /* FinesDetailVC.swift */,
+				84EFF175272B4E6E000693C2 /* VehiclesDetailVC.swift */,
 			);
 			path = DetailControllers;
 			sourceTree = "<group>";
@@ -340,16 +355,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8425DA6D2724526700F5AEDE /* DbManager.swift in Sources */,
+				84C1D246273D442C00C20DF4 /* ImageExtension.swift in Sources */,
 				849A18D927221A320006CF45 /* DateManager.swift in Sources */,
+				84EFF174272B4BCD000693C2 /* VehiclesDetailView.swift in Sources */,
 				846CDD69271F24D40066189D /* FineModel.swift in Sources */,
 				84B8118A272051D2002E84C3 /* MainView.swift in Sources */,
 				846CDD5D271F1A030066189D /* VehicleCell.swift in Sources */,
+				84EFF176272B4E6E000693C2 /* VehiclesDetailVC.swift in Sources */,
 				846CDD65271F21630066189D /* NotesVC.swift in Sources */,
 				846CDD45271F05480066189D /* MainVC.swift in Sources */,
+				841F748B272ABE5000761F13 /* FinesDetailVC.swift in Sources */,
 				84B8118C272051E2002E84C3 /* FinesView.swift in Sources */,
 				849A18E32722D1D30006CF45 /* NotesDetailVC.swift in Sources */,
 				846CDD61271F21290066189D /* FinesVC.swift in Sources */,
+				84EFF16E272AD9AF000693C2 /* ImagePickerManager.swift in Sources */,
 				846CDD6D271F24F40066189D /* NoteModel.swift in Sources */,
 				846CDD63271F213F0066189D /* VehiclesVC.swift in Sources */,
 				846CDD67271F217D0066189D /* MapVC.swift in Sources */,
@@ -359,6 +378,7 @@
 				846CDD5F271F1A100066189D /* NoteCell.swift in Sources */,
 				849A18DE2722C9860006CF45 /* NotesDetailView.swift in Sources */,
 				846CDD43271F05480066189D /* SceneDelegate.swift in Sources */,
+				841F7489272ABE2100761F13 /* FinesDetailView.swift in Sources */,
 				846CDD6B271F24E60066189D /* VehicleModel.swift in Sources */,
 				846CDD5B271F19C00066189D /* FineCell.swift in Sources */,
 			);

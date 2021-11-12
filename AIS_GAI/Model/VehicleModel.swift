@@ -10,14 +10,16 @@ import RealmSwift
 
 class VehicleModel: Object {
     
-    @Persisted var id = UUID()
+
     @Persisted var currentOwnerId: String
     @Persisted var newOwnerId: String
     @Persisted var registrationPlate: String
-    @Persisted var vehicleRegistrationCert: String
-    @Persisted var vehicleInspectionCert: String?
-    @Persisted var ownershipDocument: String
-    @Persisted var taxPaymentCert: String
-    @Persisted var addressDocument: String
+    @Persisted var vehicleRegistrationCert: Data?
+    @Persisted var vehicleInspectionCert: Data?
+    @Persisted var ownershipDocument: Data?
+    @Persisted var taxPaymentCert: Data?
+    @Persisted var addressDocument: Data?
+    @Persisted var protocolDate: Date?
     
+
 }

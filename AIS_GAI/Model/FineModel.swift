@@ -10,13 +10,13 @@ import RealmSwift
 
 class FineModel: Object {
     
-    @Persisted var id = UUID()
-    @Persisted var protocolId: Int
-    @Persisted var protocolDate: Date
+
+    @Persisted var protocolId: String
+    @Persisted var protocolDate: Date?
     @Persisted var reason: String
     @Persisted var registrationPlate: String
-    @Persisted var driverLicenseNumber: String?
-    @Persisted var photo: String?
-    @Persisted var specialMark: String?
-    
+    @Persisted var driverLicenseNumber: String
+    @Persisted var photo: Data?
+    @Persisted var specialMark: String
+
 }

@@ -88,6 +88,7 @@
                                         <connections>
                                             <outlet property="fineDateLabel" destination="NEE-Xk-LC6" id="ASB-rH-KZU"/>
                                             <outlet property="fineTitleLabel" destination="1hp-wN-eLH" id="omF-vs-f84"/>
+                                            <segue destination="Qv6-L2-f31" kind="show" identifier="finesCellSegue" id="Iqz-fs-wfj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -106,31 +107,16 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Работа со штрафами" id="eCw-9U-CYP">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JRO-Mf-ccz"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JRO-Mf-ccz">
+                            <connections>
+                                <segue destination="Qv6-L2-f31" kind="showDetail" identifier="finesNavButtonSegue" id="MZC-OC-ygT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAx-XE-Zkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="734.59821428571422"/>
-        </scene>
-        <!--Fine Detail-->
-        <scene sceneID="7vW-RA-QVV">
-            <objects>
-                <viewController title="Fine Detail" id="lDm-j1-dDS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uHD-Yd-JWg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="0Kp-fz-giS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="QVJ-QT-8as">
-                        <barButtonItem key="leftBarButtonItem" title="Скрыть" id="pcI-uF-gv0"/>
-                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="z7k-7g-1RX"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mxi-cr-crQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2703" y="735"/>
         </scene>
         <!--Traffic-->
         <scene sceneID="dCR-OR-gXu">
@@ -201,6 +187,7 @@
                                         <connections>
                                             <outlet property="vehicleDateLabel" destination="jJ5-Qg-9JF" id="hbE-01-AuR"/>
                                             <outlet property="vehicleTitleLabel" destination="GDu-9m-Rxt" id="IbS-rF-xdK"/>
+                                            <segue destination="czu-pe-2N8" kind="show" identifier="vehiclesCellSegue" id="Eb2-Gv-Oye"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -218,32 +205,17 @@
                             <outlet property="tableView" destination="l88-Il-Y3J" id="S3y-ih-U2j"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Дорожная ситуация" id="N3y-vs-5O0">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2j3-4K-Lnj"/>
+                    <navigationItem key="navigationItem" title="Учет ТС" id="N3y-vs-5O0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2j3-4K-Lnj">
+                            <connections>
+                                <segue destination="czu-pe-2N8" kind="showDetail" id="RU9-fw-uU7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3D-L9-lvW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="2110.7142857142858"/>
-        </scene>
-        <!--Vehicle Detail-->
-        <scene sceneID="gim-np-8xJ">
-            <objects>
-                <viewController title="Vehicle Detail" id="e9i-l0-UzY" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r0y-3S-YsY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="By9-ep-BCE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="bkY-nY-7E5">
-                        <barButtonItem key="leftBarButtonItem" title="Скрыть" id="gwR-9g-AF9"/>
-                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="2KY-al-nSC"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x2v-JP-D3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2855.072463768116" y="2109.375"/>
         </scene>
         <!--Notes-->
         <scene sceneID="buw-qs-lTg">
@@ -464,42 +436,6 @@
             <point key="canvasLocation" x="28.985507246376812" y="1438.3928571428571"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Wge-7J-t6A">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i9M-BP-J5m" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hBb-ir-mfv">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="lDm-j1-dDS" kind="relationship" relationship="rootViewController" id="mAa-CU-AIH"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ef5-4A-2FA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1855" y="735"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="dSr-rr-Cah">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hFI-6D-dGS" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lj1-HT-5lb">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="e9i-l0-UzY" kind="relationship" relationship="rootViewController" id="ehQ-fQ-bdu"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A0O-RY-PJW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1944.9275362318842" y="2109.375"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="zVi-0v-70U">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A7p-mU-ALc" sceneMemberID="viewController">
@@ -518,11 +454,692 @@
             </objects>
             <point key="canvasLocation" x="1944.9275362318842" y="2785.7142857142858"/>
         </scene>
+        <!--Fine Detail-->
+        <scene sceneID="ea8-jw-9xR">
+            <objects>
+                <tableViewController title="Fine Detail" id="VER-4P-ML1" customClass="FinesDetailVC" customModule="AIS_GAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="PhZ-RG-Nlv" customClass="FinesDetailView" customModule="AIS_GAI" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Dsx-h3-BOH">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fineDetailCell1" id="dFU-Y5-sXl" customClass="FineDetailCell1" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="45.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dFU-Y5-sXl" id="0cc-VJ-PHO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y4a-zr-FdB">
+                                                    <rect key="frame" x="20" y="5.5" width="88" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Заполните поле" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKY-R5-iBY">
+                                                    <rect key="frame" x="113" y="5.5" width="281" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VKY-R5-iBY" firstAttribute="top" secondItem="0cc-VJ-PHO" secondAttribute="top" constant="5.5" id="AG1-aJ-qP8"/>
+                                                <constraint firstItem="Y4a-zr-FdB" firstAttribute="top" secondItem="0cc-VJ-PHO" secondAttribute="top" constant="5.5" id="Aqz-C0-mb8"/>
+                                                <constraint firstAttribute="bottom" secondItem="Y4a-zr-FdB" secondAttribute="bottom" constant="5.5" id="EPU-rc-ucE"/>
+                                                <constraint firstAttribute="bottom" secondItem="VKY-R5-iBY" secondAttribute="bottom" constant="5.5" id="Oy6-zc-8ar"/>
+                                                <constraint firstAttribute="trailing" secondItem="VKY-R5-iBY" secondAttribute="trailing" constant="20" symbolic="YES" id="dEM-7P-xjG"/>
+                                                <constraint firstItem="Y4a-zr-FdB" firstAttribute="leading" secondItem="0cc-VJ-PHO" secondAttribute="leading" constant="20" symbolic="YES" id="dkm-gE-gs9"/>
+                                                <constraint firstItem="VKY-R5-iBY" firstAttribute="leading" secondItem="Y4a-zr-FdB" secondAttribute="trailing" constant="5" id="okN-Wf-Rn7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fineDetailCell1" id="06S-Lm-tJy" customClass="FineDetailCell1" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="414" height="45.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="06S-Lm-tJy" id="vVb-nT-upy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="73j-E3-UAp">
+                                                    <rect key="frame" x="20" y="5.5" width="88" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Заполните поле" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0a-NE-QVV">
+                                                    <rect key="frame" x="113" y="5.5" width="281" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="I0a-NE-QVV" secondAttribute="trailing" constant="20" symbolic="YES" id="NP2-I1-I28"/>
+                                                <constraint firstAttribute="bottom" secondItem="73j-E3-UAp" secondAttribute="bottom" constant="5.5" id="XT2-xC-sE7"/>
+                                                <constraint firstItem="I0a-NE-QVV" firstAttribute="leading" secondItem="73j-E3-UAp" secondAttribute="trailing" constant="5" id="hYt-fm-tT2"/>
+                                                <constraint firstItem="I0a-NE-QVV" firstAttribute="top" secondItem="vVb-nT-upy" secondAttribute="top" constant="5.5" id="nas-M6-Fuq"/>
+                                                <constraint firstItem="73j-E3-UAp" firstAttribute="top" secondItem="vVb-nT-upy" secondAttribute="top" constant="5.5" id="tGJ-2E-prX"/>
+                                                <constraint firstItem="73j-E3-UAp" firstAttribute="leading" secondItem="vVb-nT-upy" secondAttribute="leading" constant="20" symbolic="YES" id="uwn-L8-YON"/>
+                                                <constraint firstAttribute="bottom" secondItem="I0a-NE-QVV" secondAttribute="bottom" constant="5.5" id="zpn-Vq-H05"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fineDetailCell1" id="Cmu-W8-abc" customClass="FineDetailCell1" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="135.5" width="414" height="45.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cmu-W8-abc" id="ZMb-6k-Isw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="af1-PB-y5X">
+                                                    <rect key="frame" x="20" y="5.5" width="88" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Заполните поле" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dko-lm-MyZ">
+                                                    <rect key="frame" x="113" y="5.5" width="281" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="af1-PB-y5X" firstAttribute="leading" secondItem="ZMb-6k-Isw" secondAttribute="leading" constant="20" symbolic="YES" id="47V-Ji-WcJ"/>
+                                                <constraint firstItem="af1-PB-y5X" firstAttribute="top" secondItem="ZMb-6k-Isw" secondAttribute="top" constant="5.5" id="Cdo-Pf-5JD"/>
+                                                <constraint firstItem="Dko-lm-MyZ" firstAttribute="leading" secondItem="af1-PB-y5X" secondAttribute="trailing" constant="5" id="Kor-83-tbb"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dko-lm-MyZ" secondAttribute="bottom" constant="5.5" id="VYH-EH-Sb3"/>
+                                                <constraint firstAttribute="bottom" secondItem="af1-PB-y5X" secondAttribute="bottom" constant="5.5" id="Zkg-3y-gGO"/>
+                                                <constraint firstItem="Dko-lm-MyZ" firstAttribute="top" secondItem="ZMb-6k-Isw" secondAttribute="top" constant="5.5" id="guG-dB-tJh"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dko-lm-MyZ" secondAttribute="trailing" constant="20" symbolic="YES" id="vyR-Qi-fhH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fineDetailCell1" id="sgE-sJ-Hkj" customClass="FineDetailCell1" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="181" width="414" height="45.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sgE-sJ-Hkj" id="tAN-2l-RdA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OQd-sx-IX4">
+                                                    <rect key="frame" x="20" y="5.5" width="88" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Заполните поле" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SAZ-A5-sxC">
+                                                    <rect key="frame" x="113" y="5.5" width="281" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SAZ-A5-sxC" firstAttribute="top" secondItem="tAN-2l-RdA" secondAttribute="top" constant="5.5" id="1s3-5q-eYq"/>
+                                                <constraint firstAttribute="bottom" secondItem="OQd-sx-IX4" secondAttribute="bottom" constant="5.5" id="APp-wI-vtj"/>
+                                                <constraint firstItem="OQd-sx-IX4" firstAttribute="top" secondItem="tAN-2l-RdA" secondAttribute="top" constant="5.5" id="Hab-iq-dL0"/>
+                                                <constraint firstAttribute="bottom" secondItem="SAZ-A5-sxC" secondAttribute="bottom" constant="5.5" id="OVe-Zk-qfZ"/>
+                                                <constraint firstItem="SAZ-A5-sxC" firstAttribute="leading" secondItem="OQd-sx-IX4" secondAttribute="trailing" constant="5" id="Rtc-In-fBi"/>
+                                                <constraint firstAttribute="trailing" secondItem="SAZ-A5-sxC" secondAttribute="trailing" constant="20" symbolic="YES" id="UFa-Dv-u8U"/>
+                                                <constraint firstItem="OQd-sx-IX4" firstAttribute="leading" secondItem="tAN-2l-RdA" secondAttribute="leading" constant="20" symbolic="YES" id="vbX-UX-zbi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fineDetailCell2" id="cKE-an-zY4" customClass="FineDetailCell2" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="226.5" width="414" height="42.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cKE-an-zY4" id="16c-pn-EHD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJj-VF-62J">
+                                                    <rect key="frame" x="345" y="5.5" width="49" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="fineCameraButton:" destination="VER-4P-ML1" eventType="touchUpInside" id="H2A-OZ-CpE"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="xmark.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8W7-6Q-6du">
+                                                    <rect key="frame" x="20" y="3" width="54" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYU-kY-aiR">
+                                                    <rect key="frame" x="289" y="5.5" width="48" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="photo" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="fineGalleryButton:" destination="VER-4P-ML1" eventType="touchUpInside" id="gD3-2B-mpQ"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m9C-GE-TsJ">
+                                                    <rect key="frame" x="88" y="5.5" width="100" height="31.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cJj-VF-62J" firstAttribute="leading" secondItem="HYU-kY-aiR" secondAttribute="trailing" constant="8" symbolic="YES" id="9k1-xQ-z3t"/>
+                                                <constraint firstItem="HYU-kY-aiR" firstAttribute="top" secondItem="16c-pn-EHD" secondAttribute="top" constant="5.5" id="QsP-We-IlE"/>
+                                                <constraint firstAttribute="bottom" secondItem="HYU-kY-aiR" secondAttribute="bottom" constant="5.5" id="dMl-yO-kDg"/>
+                                                <constraint firstItem="cJj-VF-62J" firstAttribute="top" secondItem="16c-pn-EHD" secondAttribute="top" constant="5.5" id="e4g-bT-Krl"/>
+                                                <constraint firstAttribute="trailing" secondItem="cJj-VF-62J" secondAttribute="trailing" constant="20" symbolic="YES" id="fCF-TO-EZP"/>
+                                                <constraint firstAttribute="bottom" secondItem="cJj-VF-62J" secondAttribute="bottom" constant="5.5" id="zgE-e4-45Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fineDetailCell1" id="gst-gh-7tl" customClass="FineDetailCell1" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="269" width="414" height="45.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gst-gh-7tl" id="3HR-Mb-xe1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y8M-eB-J1Y">
+                                                    <rect key="frame" x="20" y="5.5" width="88" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Заполните поле" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sle-aD-ito">
+                                                    <rect key="frame" x="113" y="5.5" width="281" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Y8M-eB-J1Y" secondAttribute="bottom" constant="5.5" id="AJF-kg-7ta"/>
+                                                <constraint firstItem="Sle-aD-ito" firstAttribute="leading" secondItem="Y8M-eB-J1Y" secondAttribute="trailing" constant="5" id="Vkr-Pm-d0O"/>
+                                                <constraint firstAttribute="bottom" secondItem="Sle-aD-ito" secondAttribute="bottom" constant="5.5" id="boy-dC-89Y"/>
+                                                <constraint firstItem="Sle-aD-ito" firstAttribute="top" secondItem="3HR-Mb-xe1" secondAttribute="top" constant="5.5" id="d6B-RA-vkq"/>
+                                                <constraint firstAttribute="trailing" secondItem="Sle-aD-ito" secondAttribute="trailing" constant="20" symbolic="YES" id="g4r-AE-Dz6"/>
+                                                <constraint firstItem="Y8M-eB-J1Y" firstAttribute="leading" secondItem="3HR-Mb-xe1" secondAttribute="leading" constant="20" symbolic="YES" id="pyE-Y0-jAu"/>
+                                                <constraint firstItem="Y8M-eB-J1Y" firstAttribute="top" secondItem="3HR-Mb-xe1" secondAttribute="top" constant="5.5" id="zr0-zZ-4Bk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="VER-4P-ML1" id="UKP-Bk-iJH"/>
+                            <outlet property="delegate" destination="VER-4P-ML1" id="UuA-C5-5as"/>
+                            <outlet property="fineCameraButton" destination="cJj-VF-62J" id="pDt-l6-uG7"/>
+                            <outlet property="fineGalleryButton" destination="HYU-kY-aiR" id="enx-dt-liG"/>
+                            <outlet property="fineImageView" destination="8W7-6Q-6du" id="nGH-cF-RxK"/>
+                            <outlet property="fineTextField1" destination="VKY-R5-iBY" id="DIE-HZ-9rR"/>
+                            <outlet property="fineTextField2" destination="I0a-NE-QVV" id="CEB-99-eQZ"/>
+                            <outlet property="fineTextField3" destination="Dko-lm-MyZ" id="LFB-Rm-YY9"/>
+                            <outlet property="fineTextField4" destination="SAZ-A5-sxC" id="cnE-Iu-OW3"/>
+                            <outlet property="fineTextField5" destination="Sle-aD-ito" id="66O-fa-Sma"/>
+                            <outlet property="fineTitle2Label" destination="m9C-GE-TsJ" id="pTF-fv-bJ9"/>
+                            <outlet property="fineTitleLabel1" destination="Y4a-zr-FdB" id="6h6-Pa-kjC"/>
+                            <outlet property="fineTitleLabel2" destination="73j-E3-UAp" id="ssQ-ep-6VE"/>
+                            <outlet property="fineTitleLabel3" destination="af1-PB-y5X" id="GrO-Hb-Ef5"/>
+                            <outlet property="fineTitleLabel4" destination="OQd-sx-IX4" id="xXo-xA-cIw"/>
+                            <outlet property="fineTitleLabel5" destination="Y8M-eB-J1Y" id="6q9-gB-8aL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Штраф" id="L2T-8Y-tE6">
+                        <barButtonItem key="leftBarButtonItem" title="Скрыть" id="4XW-dF-yfs">
+                            <connections>
+                                <action selector="cancelBarButtonItem:" destination="VER-4P-ML1" id="3j0-ZF-B1t"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="Qf0-nC-vdx">
+                            <connections>
+                                <action selector="saveBarButtonItem:" destination="VER-4P-ML1" id="zlK-v8-OSd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acT-Gp-1ae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2968.115942028986" y="734.59821428571422"/>
+        </scene>
+        <!--Vehicle Detail-->
+        <scene sceneID="ozH-Vw-bcE">
+            <objects>
+                <tableViewController title="Vehicle Detail" id="vsr-AA-2mg" customClass="VehiclesDetailVC" customModule="AIS_GAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="sIJ-XU-MhH" customClass="VehiclesDetailView" customModule="AIS_GAI" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="hgb-4V-dCt">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="vehicleDetailCell1" id="nPf-7y-FGL" customClass="FineDetailCell1" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="45.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nPf-7y-FGL" id="Wco-qe-grG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gOu-eI-zDx">
+                                                    <rect key="frame" x="20" y="5.5" width="88" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Заполните поле" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vKf-nL-Mqp">
+                                                    <rect key="frame" x="113" y="5.5" width="281" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vKf-nL-Mqp" firstAttribute="leading" secondItem="gOu-eI-zDx" secondAttribute="trailing" constant="5" id="7ol-L4-cib"/>
+                                                <constraint firstAttribute="bottom" secondItem="gOu-eI-zDx" secondAttribute="bottom" constant="5.5" id="B1z-Eg-iev"/>
+                                                <constraint firstItem="gOu-eI-zDx" firstAttribute="leading" secondItem="Wco-qe-grG" secondAttribute="leading" constant="20" symbolic="YES" id="BaE-Wy-vdO"/>
+                                                <constraint firstAttribute="trailing" secondItem="vKf-nL-Mqp" secondAttribute="trailing" constant="20" symbolic="YES" id="C4V-Hv-tyA"/>
+                                                <constraint firstItem="gOu-eI-zDx" firstAttribute="top" secondItem="Wco-qe-grG" secondAttribute="top" constant="5.5" id="EaE-Qg-0Kf"/>
+                                                <constraint firstItem="vKf-nL-Mqp" firstAttribute="top" secondItem="Wco-qe-grG" secondAttribute="top" constant="5.5" id="Fkl-uV-TNI"/>
+                                                <constraint firstAttribute="bottom" secondItem="vKf-nL-Mqp" secondAttribute="bottom" constant="5.5" id="W6T-xp-Ka5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="vehicleDetailCell1" id="LdH-mi-as7" customClass="FineDetailCell1" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="414" height="45.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LdH-mi-as7" id="zbG-Ho-k7M">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hIV-LC-za9">
+                                                    <rect key="frame" x="20" y="5.5" width="88" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Заполните поле" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GyP-6W-WYd">
+                                                    <rect key="frame" x="113" y="5.5" width="281" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hIV-LC-za9" firstAttribute="top" secondItem="zbG-Ho-k7M" secondAttribute="top" constant="5.5" id="GdO-a2-fMu"/>
+                                                <constraint firstAttribute="trailing" secondItem="GyP-6W-WYd" secondAttribute="trailing" constant="20" symbolic="YES" id="Oe6-vh-vfq"/>
+                                                <constraint firstItem="GyP-6W-WYd" firstAttribute="top" secondItem="zbG-Ho-k7M" secondAttribute="top" constant="5.5" id="REm-nH-6MG"/>
+                                                <constraint firstItem="GyP-6W-WYd" firstAttribute="leading" secondItem="hIV-LC-za9" secondAttribute="trailing" constant="5" id="RMW-78-0ku"/>
+                                                <constraint firstAttribute="bottom" secondItem="hIV-LC-za9" secondAttribute="bottom" constant="5.5" id="beo-GX-HCD"/>
+                                                <constraint firstItem="hIV-LC-za9" firstAttribute="leading" secondItem="zbG-Ho-k7M" secondAttribute="leading" constant="20" symbolic="YES" id="eea-YN-tbE"/>
+                                                <constraint firstAttribute="bottom" secondItem="GyP-6W-WYd" secondAttribute="bottom" constant="5.5" id="kGe-76-QCv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="vehicleDetailCell1" id="Q11-Vj-bFl" customClass="FineDetailCell1" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="135.5" width="414" height="45.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q11-Vj-bFl" id="vI1-Mt-pPk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CFf-sY-ljV">
+                                                    <rect key="frame" x="20" y="5.5" width="88" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Заполните поле" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-WU-7U1">
+                                                    <rect key="frame" x="113" y="5.5" width="281" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CFf-sY-ljV" firstAttribute="top" secondItem="vI1-Mt-pPk" secondAttribute="top" constant="5.5" id="19R-Bb-n9G"/>
+                                                <constraint firstAttribute="trailing" secondItem="fFm-WU-7U1" secondAttribute="trailing" constant="20" symbolic="YES" id="HRF-dn-ceQ"/>
+                                                <constraint firstItem="CFf-sY-ljV" firstAttribute="leading" secondItem="vI1-Mt-pPk" secondAttribute="leading" constant="20" symbolic="YES" id="JZU-bp-MBC"/>
+                                                <constraint firstAttribute="bottom" secondItem="fFm-WU-7U1" secondAttribute="bottom" constant="5.5" id="UB6-pQ-e0T"/>
+                                                <constraint firstItem="fFm-WU-7U1" firstAttribute="top" secondItem="vI1-Mt-pPk" secondAttribute="top" constant="5.5" id="hn9-cY-zLF"/>
+                                                <constraint firstItem="fFm-WU-7U1" firstAttribute="leading" secondItem="CFf-sY-ljV" secondAttribute="trailing" constant="5" id="jGT-vM-WMm"/>
+                                                <constraint firstAttribute="bottom" secondItem="CFf-sY-ljV" secondAttribute="bottom" constant="5.5" id="urU-KS-0Zg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="vehicleDetailCell2" id="qcW-87-ook" customClass="FineDetailCell2" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="181" width="414" height="42.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qcW-87-ook" id="KMA-l2-l5b">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TE-as-lDK">
+                                                    <rect key="frame" x="345" y="5.5" width="49" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="fineCameraButton:" destination="VER-4P-ML1" eventType="touchUpInside" id="5oB-WV-9fb"/>
+                                                        <action selector="vehicleCameraButton1:" destination="vsr-AA-2mg" eventType="touchUpInside" id="Rva-Cj-Mhf"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="xmark.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6oq-mo-P1U">
+                                                    <rect key="frame" x="20" y="3" width="54" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDw-kc-Fyc">
+                                                    <rect key="frame" x="289" y="5.5" width="48" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="photo" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="fineGalleryButton:" destination="VER-4P-ML1" eventType="touchUpInside" id="X3G-ih-eiR"/>
+                                                        <action selector="vehicleGalleryButton1:" destination="vsr-AA-2mg" eventType="touchUpInside" id="PnK-77-l8g"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7mE-kz-Kbf">
+                                                    <rect key="frame" x="88" y="5.5" width="100" height="31.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="0TE-as-lDK" secondAttribute="trailing" constant="20" symbolic="YES" id="8Qi-hM-fdd"/>
+                                                <constraint firstAttribute="bottom" secondItem="0TE-as-lDK" secondAttribute="bottom" constant="5.5" id="cE9-TS-bpG"/>
+                                                <constraint firstItem="aDw-kc-Fyc" firstAttribute="top" secondItem="KMA-l2-l5b" secondAttribute="top" constant="5.5" id="d8u-n2-CAa"/>
+                                                <constraint firstItem="0TE-as-lDK" firstAttribute="top" secondItem="KMA-l2-l5b" secondAttribute="top" constant="5.5" id="dQc-Ii-WdS"/>
+                                                <constraint firstAttribute="bottom" secondItem="aDw-kc-Fyc" secondAttribute="bottom" constant="5.5" id="eCL-C5-WwC"/>
+                                                <constraint firstItem="0TE-as-lDK" firstAttribute="leading" secondItem="aDw-kc-Fyc" secondAttribute="trailing" constant="8" symbolic="YES" id="qxq-p1-ewr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="vehicleDetailCell2" id="ock-eK-JH8" customClass="FineDetailCell2" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="223.5" width="414" height="42.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ock-eK-JH8" id="cKa-P6-u8W">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agc-hO-7L2">
+                                                    <rect key="frame" x="345" y="5.5" width="49" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="fineCameraButton:" destination="VER-4P-ML1" eventType="touchUpInside" id="0uV-x5-MdO"/>
+                                                        <action selector="vehicleCameraButton2:" destination="vsr-AA-2mg" eventType="touchUpInside" id="T3k-Fi-xn9"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="xmark.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pmQ-Iu-q1a">
+                                                    <rect key="frame" x="20" y="3" width="54" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eU-TT-Xnn">
+                                                    <rect key="frame" x="289" y="5.5" width="48" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="photo" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="fineGalleryButton:" destination="VER-4P-ML1" eventType="touchUpInside" id="eHl-n6-Zrf"/>
+                                                        <action selector="vehicleGalleryButton2:" destination="vsr-AA-2mg" eventType="touchUpInside" id="WXR-Gz-wcK"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z1o-fz-Y6y">
+                                                    <rect key="frame" x="88" y="5.5" width="100" height="31.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Agc-hO-7L2" secondAttribute="bottom" constant="5.5" id="Bbq-YT-cSN"/>
+                                                <constraint firstAttribute="trailing" secondItem="Agc-hO-7L2" secondAttribute="trailing" constant="20" symbolic="YES" id="QjZ-oC-KSe"/>
+                                                <constraint firstItem="Agc-hO-7L2" firstAttribute="leading" secondItem="6eU-TT-Xnn" secondAttribute="trailing" constant="8" symbolic="YES" id="Wcq-Mw-PCM"/>
+                                                <constraint firstAttribute="bottom" secondItem="6eU-TT-Xnn" secondAttribute="bottom" constant="5.5" id="YwJ-Cx-KdS"/>
+                                                <constraint firstItem="Agc-hO-7L2" firstAttribute="top" secondItem="cKa-P6-u8W" secondAttribute="top" constant="5.5" id="igo-N2-KVR"/>
+                                                <constraint firstItem="6eU-TT-Xnn" firstAttribute="top" secondItem="cKa-P6-u8W" secondAttribute="top" constant="5.5" id="wQf-eO-cwL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="vehicleDetailCell2" id="E1z-aX-nRG" customClass="FineDetailCell2" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="266" width="414" height="42.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E1z-aX-nRG" id="3PE-ww-XTL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smK-s6-gwQ">
+                                                    <rect key="frame" x="345" y="5.5" width="49" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="fineCameraButton:" destination="VER-4P-ML1" eventType="touchUpInside" id="hhl-pg-fwN"/>
+                                                        <action selector="vehicleCameraButton3:" destination="vsr-AA-2mg" eventType="touchUpInside" id="xBS-Lb-Y8m"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="xmark.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="p4f-4m-9rp">
+                                                    <rect key="frame" x="20" y="3" width="54" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DV-Dl-Rzt">
+                                                    <rect key="frame" x="289" y="5.5" width="48" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="photo" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="fineGalleryButton:" destination="VER-4P-ML1" eventType="touchUpInside" id="PxX-2k-8bC"/>
+                                                        <action selector="vehicleGalleryButton3:" destination="vsr-AA-2mg" eventType="touchUpInside" id="FmP-hX-jTi"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AaW-eP-yLX">
+                                                    <rect key="frame" x="88" y="5.5" width="100" height="31.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="5DV-Dl-Rzt" secondAttribute="bottom" constant="5.5" id="6LR-YK-lAy"/>
+                                                <constraint firstItem="5DV-Dl-Rzt" firstAttribute="top" secondItem="3PE-ww-XTL" secondAttribute="top" constant="5.5" id="NWR-xP-rEt"/>
+                                                <constraint firstAttribute="bottom" secondItem="smK-s6-gwQ" secondAttribute="bottom" constant="5.5" id="NZa-PW-pue"/>
+                                                <constraint firstAttribute="trailing" secondItem="smK-s6-gwQ" secondAttribute="trailing" constant="20" symbolic="YES" id="TXY-UY-g0W"/>
+                                                <constraint firstItem="smK-s6-gwQ" firstAttribute="top" secondItem="3PE-ww-XTL" secondAttribute="top" constant="5.5" id="V5K-bc-7FW"/>
+                                                <constraint firstItem="smK-s6-gwQ" firstAttribute="leading" secondItem="5DV-Dl-Rzt" secondAttribute="trailing" constant="8" symbolic="YES" id="XKV-Ra-PGj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="vehicleDetailCell2" id="lMG-e0-cPn" customClass="FineDetailCell2" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="308.5" width="414" height="42.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lMG-e0-cPn" id="3fu-ub-gNv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deu-fa-GyQ">
+                                                    <rect key="frame" x="345" y="5.5" width="49" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="fineCameraButton:" destination="VER-4P-ML1" eventType="touchUpInside" id="8X1-53-zeC"/>
+                                                        <action selector="vehicleCameraButton4:" destination="vsr-AA-2mg" eventType="touchUpInside" id="Gcl-gX-HIU"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="xmark.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dzy-NO-yK5">
+                                                    <rect key="frame" x="20" y="3" width="54" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbv-Zs-bQG">
+                                                    <rect key="frame" x="289" y="5.5" width="48" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="photo" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="fineGalleryButton:" destination="VER-4P-ML1" eventType="touchUpInside" id="or7-KH-202"/>
+                                                        <action selector="vehicleGalleryButton4:" destination="vsr-AA-2mg" eventType="touchUpInside" id="VFY-w7-kv6"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2Ss-Bh-ffh">
+                                                    <rect key="frame" x="88" y="5.5" width="100" height="31.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="deu-fa-GyQ" secondAttribute="trailing" constant="20" symbolic="YES" id="6oE-co-jfS"/>
+                                                <constraint firstAttribute="bottom" secondItem="deu-fa-GyQ" secondAttribute="bottom" constant="5.5" id="DZr-Wv-zQk"/>
+                                                <constraint firstItem="deu-fa-GyQ" firstAttribute="leading" secondItem="nbv-Zs-bQG" secondAttribute="trailing" constant="8" symbolic="YES" id="kiz-om-tZU"/>
+                                                <constraint firstItem="nbv-Zs-bQG" firstAttribute="top" secondItem="3fu-ub-gNv" secondAttribute="top" constant="5.5" id="qna-mR-EBU"/>
+                                                <constraint firstAttribute="bottom" secondItem="nbv-Zs-bQG" secondAttribute="bottom" constant="5.5" id="tMD-ff-H2q"/>
+                                                <constraint firstItem="deu-fa-GyQ" firstAttribute="top" secondItem="3fu-ub-gNv" secondAttribute="top" constant="5.5" id="vaZ-Uu-uOu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="vehicleDetailCell2" id="n30-0g-dxf" customClass="FineDetailCell2" customModule="AIS_GAI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="351" width="414" height="42.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n30-0g-dxf" id="ZKG-eX-Zsi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgv-w9-DEa">
+                                                    <rect key="frame" x="345" y="5.5" width="49" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="fineCameraButton:" destination="VER-4P-ML1" eventType="touchUpInside" id="QSc-jV-RJO"/>
+                                                        <action selector="vehicleCameraButton5:" destination="vsr-AA-2mg" eventType="touchUpInside" id="6wj-kd-hpA"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="xmark.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sfq-5b-546">
+                                                    <rect key="frame" x="20" y="3" width="54" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNK-3n-rKi">
+                                                    <rect key="frame" x="289" y="5.5" width="48" height="31.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="photo" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="fineGalleryButton:" destination="VER-4P-ML1" eventType="touchUpInside" id="zqF-W5-KlQ"/>
+                                                        <action selector="vehicleGalleryButton5:" destination="vsr-AA-2mg" eventType="touchUpInside" id="zuS-gg-PSJ"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Название поля" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ika-Qn-T4m">
+                                                    <rect key="frame" x="88" y="5.5" width="100" height="31.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gNK-3n-rKi" firstAttribute="top" secondItem="ZKG-eX-Zsi" secondAttribute="top" constant="5.5" id="YR9-Pv-mB6"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wgv-w9-DEa" secondAttribute="bottom" constant="5.5" id="Yls-Qj-2r0"/>
+                                                <constraint firstItem="Wgv-w9-DEa" firstAttribute="top" secondItem="ZKG-eX-Zsi" secondAttribute="top" constant="5.5" id="cce-fk-UWX"/>
+                                                <constraint firstAttribute="bottom" secondItem="gNK-3n-rKi" secondAttribute="bottom" constant="5.5" id="mH8-j8-8do"/>
+                                                <constraint firstItem="Wgv-w9-DEa" firstAttribute="leading" secondItem="gNK-3n-rKi" secondAttribute="trailing" constant="8" symbolic="YES" id="ndD-jL-VEk"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wgv-w9-DEa" secondAttribute="trailing" constant="20" symbolic="YES" id="qX6-FC-g2n"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="vsr-AA-2mg" id="AG8-lg-T5x"/>
+                            <outlet property="delegate" destination="vsr-AA-2mg" id="jeV-nV-ux7"/>
+                            <outlet property="vehicleCameraButton1" destination="0TE-as-lDK" id="MWL-vq-igX"/>
+                            <outlet property="vehicleCameraButton2" destination="Agc-hO-7L2" id="u6n-Fp-8bJ"/>
+                            <outlet property="vehicleCameraButton3" destination="smK-s6-gwQ" id="ZEH-at-ifc"/>
+                            <outlet property="vehicleCameraButton4" destination="deu-fa-GyQ" id="zXf-29-M8e"/>
+                            <outlet property="vehicleCameraButton5" destination="Wgv-w9-DEa" id="1Pk-Si-Y1t"/>
+                            <outlet property="vehicleGalleryButton1" destination="aDw-kc-Fyc" id="64B-5z-doM"/>
+                            <outlet property="vehicleGalleryButton2" destination="6eU-TT-Xnn" id="FkM-Yh-kS6"/>
+                            <outlet property="vehicleGalleryButton3" destination="5DV-Dl-Rzt" id="d1e-K6-Dy3"/>
+                            <outlet property="vehicleGalleryButton4" destination="nbv-Zs-bQG" id="oNp-zg-og5"/>
+                            <outlet property="vehicleGalleryButton5" destination="gNK-3n-rKi" id="AXa-uS-cUn"/>
+                            <outlet property="vehicleImageView1" destination="6oq-mo-P1U" id="lH7-KE-8tY"/>
+                            <outlet property="vehicleImageView2" destination="pmQ-Iu-q1a" id="cVY-m8-DxF"/>
+                            <outlet property="vehicleImageView3" destination="p4f-4m-9rp" id="fgu-fO-tEg"/>
+                            <outlet property="vehicleImageView4" destination="dzy-NO-yK5" id="ULc-nc-UFq"/>
+                            <outlet property="vehicleImageView5" destination="sfq-5b-546" id="Jpd-CA-K1T"/>
+                            <outlet property="vehicleTextField1" destination="vKf-nL-Mqp" id="hgm-0V-Asu"/>
+                            <outlet property="vehicleTextField2" destination="GyP-6W-WYd" id="ucE-l1-0zA"/>
+                            <outlet property="vehicleTextField3" destination="fFm-WU-7U1" id="ogC-n6-yk9"/>
+                            <outlet property="vehicleTitle2Label1" destination="7mE-kz-Kbf" id="g5a-v1-Egl"/>
+                            <outlet property="vehicleTitle2Label2" destination="z1o-fz-Y6y" id="Gje-Oe-YRt"/>
+                            <outlet property="vehicleTitle2Label3" destination="AaW-eP-yLX" id="tJ4-AK-GmE"/>
+                            <outlet property="vehicleTitle2Label4" destination="2Ss-Bh-ffh" id="1wL-lm-Loy"/>
+                            <outlet property="vehicleTitle2Label5" destination="Ika-Qn-T4m" id="xn2-Re-cNU"/>
+                            <outlet property="vehicleTitleLabel1" destination="gOu-eI-zDx" id="NT3-HO-VME"/>
+                            <outlet property="vehicleTitleLabel2" destination="hIV-LC-za9" id="bpG-Op-Vrg"/>
+                            <outlet property="vehicleTitleLabel3" destination="CFf-sY-ljV" id="sv6-V4-qxh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Постановка ТС на учет" id="Ngo-HS-cF4">
+                        <barButtonItem key="leftBarButtonItem" title="Скрыть" id="fO7-bi-8FT">
+                            <connections>
+                                <action selector="cancelBarButtonItem:" destination="vsr-AA-2mg" id="gkZ-Lx-AqH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="FHX-nU-Ja9">
+                            <connections>
+                                <action selector="saveBarButtonItem:" destination="vsr-AA-2mg" id="lWX-fV-K23"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jk8-ew-CQ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2855.072463768116" y="2110.7142857142858"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Eby-Pn-Bhx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qv6-L2-f31" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ANy-JF-cD2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PGl-yb-Upp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VER-4P-ML1" kind="relationship" relationship="rootViewController" id="MfB-9a-OKw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ek0-Y6-8k5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057.971014492754" y="734.59821428571422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gNi-B7-vHi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="czu-pe-2N8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Cyr-qs-jcO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6QX-nH-lDM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vsr-AA-2mg" kind="relationship" relationship="rootViewController" id="VJQ-bx-L0s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9w-Y0-awq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944.9275362318842" y="2110.7142857142858"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Eb2-Gv-Oye"/>
+        <segue reference="Iqz-fs-wfj"/>
         <segue reference="4ha-Xi-AV0"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="xmark.rectangle" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
