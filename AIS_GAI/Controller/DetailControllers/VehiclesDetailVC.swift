@@ -9,7 +9,9 @@ import UIKit
 import RealmSwift
 
 class VehiclesDetailVC: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
+    var isCanSave = true
+    
     var vehicleModel = VehicleModel()
     let dateManager = DateManager()
     let imagePickerManager = ImagePickerManager()
@@ -18,7 +20,7 @@ class VehiclesDetailVC: UITableViewController, UIImagePickerControllerDelegate, 
         guard isViewLoaded else { return nil }
         return (view as! VehiclesDetailView)
     }
-
+    
     
     @IBAction func cancelBarButtonItem(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
@@ -45,17 +47,23 @@ class VehiclesDetailVC: UITableViewController, UIImagePickerControllerDelegate, 
         
         dismiss(animated: true, completion: nil)
     }
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
         configurateData()
+        vehiclesDetailView.configureView()
         vehiclesDetailView.configureCells()
         imagePickerManager.imagePickerController.delegate = self
-        // Do any additional setup after loading the view.
+        
+        if isCanSave{
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+        }
+        else{
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
+        }
     }
-
 }
 
 private extension VehiclesDetailVC{
@@ -67,11 +75,11 @@ private extension VehiclesDetailVC{
         vehiclesDetailView.vehicleTextField3.text = vehicleModel.registrationPlate
         
         if vehicleModel.vehicleRegistrationCert != nil, vehicleModel.vehicleInspectionCert != nil, vehicleModel.ownershipDocument != nil, vehicleModel.taxPaymentCert != nil, vehicleModel.taxPaymentCert != nil, vehicleModel.addressDocument != nil{
-        vehiclesDetailView.vehicleImageView1.image =  UIImage(data: vehicleModel.vehicleRegistrationCert!)
-        vehiclesDetailView.vehicleImageView2.image =  UIImage(data: vehicleModel.vehicleInspectionCert!)
-        vehiclesDetailView.vehicleImageView3.image =  UIImage(data: vehicleModel.ownershipDocument!)
-        vehiclesDetailView.vehicleImageView4.image =  UIImage(data: vehicleModel.taxPaymentCert!)
-        vehiclesDetailView.vehicleImageView5.image =  UIImage(data: vehicleModel.addressDocument!)
+            vehiclesDetailView.vehicleImageView1.image =  UIImage(data: vehicleModel.vehicleRegistrationCert!)
+            vehiclesDetailView.vehicleImageView2.image =  UIImage(data: vehicleModel.vehicleInspectionCert!)
+            vehiclesDetailView.vehicleImageView3.image =  UIImage(data: vehicleModel.ownershipDocument!)
+            vehiclesDetailView.vehicleImageView4.image =  UIImage(data: vehicleModel.taxPaymentCert!)
+            vehiclesDetailView.vehicleImageView5.image =  UIImage(data: vehicleModel.addressDocument!)
         }
     }
     
@@ -92,12 +100,12 @@ extension VehiclesDetailVC: ImagePickerManagerProtocol{
         
         picker.dismiss(animated: true, completion: nil)
         
-}
+    }
     
     func presentPicker(sourceType: Picker){
         imagePickerManager.checkPermissions()
         let picker = UIImagePickerController()
-
+        
         if sourceType == Picker.photoLibrary{
             imagePickerManager.imagePickerController.sourceType = .photoLibrary
             self.present(imagePickerManager.imagePickerController, animated: true, completion: nil)
@@ -117,7 +125,7 @@ private extension VehiclesDetailVC{
     @IBAction func vehicleGalleryButton1(_ sender: UIButton) {
         presentPicker(sourceType: .photoLibrary)
         imagePickerManager.imageView = vehiclesDetailView.vehicleImageView1
-
+        
         self.present(imagePickerManager.imagePickerController, animated: true, completion: nil)
     }
     
@@ -131,7 +139,7 @@ private extension VehiclesDetailVC{
     @IBAction func vehicleGalleryButton2(_ sender: UIButton) {
         presentPicker(sourceType: .photoLibrary)
         imagePickerManager.imageView = vehiclesDetailView.vehicleImageView2
-
+        
         self.present(imagePickerManager.imagePickerController, animated: true, completion: nil)
     }
     
@@ -145,7 +153,7 @@ private extension VehiclesDetailVC{
     @IBAction func vehicleGalleryButton3(_ sender: UIButton) {
         presentPicker(sourceType: .photoLibrary)
         imagePickerManager.imageView = vehiclesDetailView.vehicleImageView3
-
+        
         self.present(imagePickerManager.imagePickerController, animated: true, completion: nil)
     }
     
@@ -159,7 +167,7 @@ private extension VehiclesDetailVC{
     @IBAction func vehicleGalleryButton4(_ sender: UIButton) {
         presentPicker(sourceType: .photoLibrary)
         imagePickerManager.imageView = vehiclesDetailView.vehicleImageView4
-
+        
         self.present(imagePickerManager.imagePickerController, animated: true, completion: nil)
     }
     
@@ -173,7 +181,7 @@ private extension VehiclesDetailVC{
     @IBAction func vehicleGalleryButton5(_ sender: UIButton) {
         presentPicker(sourceType: .photoLibrary)
         imagePickerManager.imageView = vehiclesDetailView.vehicleImageView5
-
+        
         self.present(imagePickerManager.imagePickerController, animated: true, completion: nil)
     }
     

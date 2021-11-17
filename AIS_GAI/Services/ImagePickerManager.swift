@@ -9,8 +9,8 @@ import UIKit
 import Photos
 
 enum Picker {
-case camera
-case photoLibrary
+    case camera
+    case photoLibrary
 }
 
 protocol ImagePickerManagerProtocol: UIImagePickerControllerDelegate{
@@ -19,17 +19,17 @@ protocol ImagePickerManagerProtocol: UIImagePickerControllerDelegate{
 }
 
 class ImagePickerManager: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-
+    
     var imageView = UIImageView()
     
     var imagePickerController = UIImagePickerController()
-          
+    
     func checkPermissions() {
         if PHPhotoLibrary.authorizationStatus() != PHAuthorizationStatus.authorized {
             PHPhotoLibrary.requestAuthorization({ (status: PHAuthorizationStatus) -> Void in ()
             })
         }
-
+        
         if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
         } else {
             PHPhotoLibrary
@@ -44,5 +44,5 @@ class ImagePickerManager: UIViewController, UIImagePickerControllerDelegate, UIN
             print("We don't have access to your Photos.")
         }
     }
-
+    
 }

@@ -43,11 +43,11 @@ class VehiclesDetailView: UITableView {
     @IBOutlet weak var vehicleGalleryButton5: UIButton!
     @IBOutlet weak var vehicleCameraButton5: UIButton!
     
-
+    
     let titles = ["ИИН текущего владельца ТС","ИИН нового владельца ТС","Гос номер автомобиля","Техпаспорт","Техосмотр","Документ, подтверждающий право собственности на ТС","Справка об уплате налога на ТС","Адресная справка"]
-
+    
     func configureView(){
-      //  self.backgroundColor = .secondarySystemBackground
+        //  self.backgroundColor = .secondarySystemBackground
     }
     
     func configureCells(){
@@ -59,17 +59,6 @@ class VehiclesDetailView: UITableView {
         vehicleTitle2Label3.text = titles[5]
         vehicleTitle2Label4.text = titles[6]
         vehicleTitle2Label5.text = titles[7]
-
+        
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

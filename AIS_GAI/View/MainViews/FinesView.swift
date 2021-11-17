@@ -8,11 +8,10 @@
 import UIKit
 
 class FinesView: UIView {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     func configureView(){
-
+        
     }
-
 }

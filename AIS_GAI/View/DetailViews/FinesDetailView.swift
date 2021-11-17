@@ -29,14 +29,10 @@ class FinesDetailView: UITableView {
     @IBOutlet weak var fineGalleryButton: UIButton!
     @IBOutlet weak var fineCameraButton: UIButton!
     
-    
     let titles = ["Номер протокола","Причина остановки","Гос номер автомобиля","Номер ВУ","Фотография с места остановки","Особые пометки"]
-
-    var isSaveNavButtonActiv = true
-    
     
     func configureView(){
-      //  self.backgroundColor = .secondarySystemBackground
+        //  self.backgroundColor = .secondarySystemBackground
     }
     
     func configureCells(){
@@ -46,16 +42,6 @@ class FinesDetailView: UITableView {
         fineTitleLabel4.text = titles[3]
         fineTitle2Label.text = titles[4]
         fineTitleLabel5.text = titles[5]
-
+        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class NotesView: UIView {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     func configureView(){

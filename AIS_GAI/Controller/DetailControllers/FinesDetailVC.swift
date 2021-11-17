@@ -14,6 +14,8 @@ class FinesDetailVC: UITableViewController, UIImagePickerControllerDelegate, UIN
     // можно сделать кастом наподобе cellLabel = self.viewWithTag(100) as! UILabel
     //  но не нужно
     
+    var isCanSave = true
+    
     var fineModel = FineModel()
     let dateManager = DateManager()
     let imagePickerManager = ImagePickerManager()
@@ -32,7 +34,7 @@ class FinesDetailVC: UITableViewController, UIImagePickerControllerDelegate, UIN
         fineModel.photo = imagePickerManager.imageView.image?.jpeg(.medium) // правильнее finesDetailView.imageView !!!
         fineModel.specialMark = finesDetailView.fineTextField5.text ?? "Поле не заполнено!"
         fineModel.protocolDate = dateManager.getCurrentDate()
-
+        
         let realm = try! Realm()
         try! realm.write{
             realm.add(fineModel)
@@ -44,15 +46,22 @@ class FinesDetailVC: UITableViewController, UIImagePickerControllerDelegate, UIN
     @IBAction func cancelBarButtonItem(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
         configurateData()
+        finesDetailView.configureView()
         finesDetailView.configureCells()
         imagePickerManager.imagePickerController.delegate = self
-
-
+        
+        if isCanSave{
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+        }
+        else{
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
+        }
+        
         
         // Do any additional setup after loading the view.
     }
@@ -62,14 +71,14 @@ class FinesDetailVC: UITableViewController, UIImagePickerControllerDelegate, UIN
 private extension FinesDetailVC{
     
     func configurateData(){
-
+        
         
         finesDetailView.fineTextField1.text = fineModel.protocolId
         finesDetailView.fineTextField2.text = fineModel.reason
         finesDetailView.fineTextField3.text = fineModel.registrationPlate
         finesDetailView.fineTextField4.text = fineModel.driverLicenseNumber
         if fineModel.photo != nil{
-        finesDetailView.fineImageView.image = UIImage(data: fineModel.photo!)
+            finesDetailView.fineImageView.image = UIImage(data: fineModel.photo!)
         }
         finesDetailView.fineTextField5.text = fineModel.specialMark
     }
@@ -91,12 +100,12 @@ extension FinesDetailVC: ImagePickerManagerProtocol{
         
         picker.dismiss(animated: true, completion: nil)
         
-}
+    }
     
     func presentPicker(sourceType: Picker){
         imagePickerManager.checkPermissions()
         let picker = UIImagePickerController()
-
+        
         if sourceType == Picker.photoLibrary{
             imagePickerManager.imagePickerController.sourceType = .photoLibrary
             self.present(imagePickerManager.imagePickerController, animated: true, completion: nil)
@@ -111,13 +120,12 @@ extension FinesDetailVC: ImagePickerManagerProtocol{
     }
 }
 
-
 private extension FinesDetailVC{
     
     @IBAction func fineGalleryButton(_ sender: UIButton) {
         presentPicker(sourceType: .photoLibrary)
         imagePickerManager.imageView = finesDetailView.fineImageView
-
+        
         self.present(imagePickerManager.imagePickerController, animated: true, completion: nil)
     }
     

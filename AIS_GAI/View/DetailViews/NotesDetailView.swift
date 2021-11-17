@@ -8,10 +8,8 @@
 import UIKit
 
 class NotesDetailView: UIView {
-
+    
     func configureView(){
         self.backgroundColor = .secondarySystemBackground
-        // notesDetailTextView.placeholder = "Ваш текст"
     }
-    
 }

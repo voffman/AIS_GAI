@@ -10,12 +10,9 @@ import RealmSwift
 
 class NotesDetailVC: UIViewController {
     
-    // В UIView не получается передавать данные через segue-s (предупреждение: cast from... to unrelated type...)
-    //поэтому требуется ViewController
-
+    
     @IBOutlet weak var notesDetailTitleTF: UITextField!
     @IBOutlet weak var notesDetailFullTextTV: UITextView!
-    
     
     var noteModel = NoteModel()
     let dateManager = DateManager()
@@ -25,13 +22,12 @@ class NotesDetailVC: UIViewController {
         return (view as! NotesDetailView)
     }
     
-     @IBAction func cancelBarButtonItem(_ sender: UIBarButtonItem) {
+    @IBAction func cancelBarButtonItem(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveBarButtonItem(_ sender: UIBarButtonItem) {
-       // print("Сохранено")
-
+        
         noteModel.title = notesDetailTitleTF.text
         noteModel.fullText = notesDetailFullTextTV.text
         noteModel.date = dateManager.getCurrentDate()
@@ -47,7 +43,7 @@ class NotesDetailVC: UIViewController {
         notesDetailTitleTF.text = noteModel.title
         notesDetailFullTextTV.text = noteModel.fullText
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         notesDetailView.configureView()

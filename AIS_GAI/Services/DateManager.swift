@@ -8,7 +8,7 @@
 import Foundation
 
 class DateManager{
-
+    
     func getCurrentDate() -> Date? {
         let date = Date()
         let calendar = Calendar.current
@@ -23,7 +23,7 @@ class DateManager{
         
         return calendar.date(from: dateComponents)
     }
-
+    
     func convertDateToString(date: Date?) -> String{
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm d.MM.y"

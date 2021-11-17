@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nI2-yS-Iqi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nI2-yS-Iqi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,13 +12,134 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController title="Main" id="BYZ-38-t0r" customClass="MainVC" customModule="AIS_GAI" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="MainView" customModule="AIS_GAI" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="АИС ГАИ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fO9-7M-YNb">
+                                <rect key="frame" x="50" y="94" width="314" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Практическая часть курсового проекта студента группы ВТ-18-3 Свиридова В.В. Тема: АИС ГАИ, вариант № 33." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aIC-tn-5Is">
+                                <rect key="frame" x="25" y="174" width="364" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Быстрое удаление записей" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MSm-Vw-ONr">
+                                <rect key="frame" x="55" y="233" width="304" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zw9-DZ-Xtf">
+                                <rect key="frame" x="159" y="274" width="96" height="31"/>
+                                <buttonConfiguration key="configuration" style="filled" image="trash" catalog="system" title="Учет ТС"/>
+                                <connections>
+                                    <action selector="eraseVehiclesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nle-sr-GOU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKK-AI-RIj">
+                                <rect key="frame" x="100" y="325.5" width="100" height="31"/>
+                                <buttonConfiguration key="configuration" style="filled" image="trash" catalog="system" title="Штрафы"/>
+                                <connections>
+                                    <action selector="eraseFinesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xJa-E6-2lr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0F-FX-QXj">
+                                <rect key="frame" x="214" y="325.5" width="100" height="31"/>
+                                <buttonConfiguration key="configuration" style="filled" image="trash" catalog="system" title="Заметки"/>
+                                <connections>
+                                    <action selector="eraseNotesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fqZ-aC-fEt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSo-mH-1WQ">
+                                <rect key="frame" x="119" y="377" width="176" height="31"/>
+                                <buttonConfiguration key="configuration" style="filled" image="trash" catalog="system" title="Стереть все записи"/>
+                                <connections>
+                                    <action selector="eraseAllButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdJ-lc-0PC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zw9-DZ-Xtf" firstAttribute="top" secondItem="MSm-Vw-ONr" secondAttribute="bottom" constant="10.5" id="29b-a3-NbV"/>
+                            <constraint firstItem="CSo-mH-1WQ" firstAttribute="top" secondItem="sKK-AI-RIj" secondAttribute="bottom" constant="10.5" id="4Me-Tl-10Y"/>
+                            <constraint firstItem="MSm-Vw-ONr" firstAttribute="top" secondItem="aIC-tn-5Is" secondAttribute="bottom" constant="2" id="5b3-K1-iol"/>
+                            <constraint firstItem="fO9-7M-YNb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="9sJ-LZ-dJj"/>
+                            <constraint firstItem="sKK-AI-RIj" firstAttribute="top" secondItem="Zw9-DZ-Xtf" secondAttribute="bottom" constant="20.5" id="AB7-7L-C2d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fO9-7M-YNb" secondAttribute="trailing" constant="50" id="Dao-4V-lYs"/>
+                            <constraint firstItem="Q0F-FX-QXj" firstAttribute="leading" secondItem="sKK-AI-RIj" secondAttribute="trailing" constant="14" id="HHr-yq-olw"/>
+                            <constraint firstItem="Zw9-DZ-Xtf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HTv-eJ-Vmr"/>
+                            <constraint firstItem="MSm-Vw-ONr" firstAttribute="top" secondItem="aIC-tn-5Is" secondAttribute="bottom" constant="30" id="NXL-pL-Uov"/>
+                            <constraint firstItem="sKK-AI-RIj" firstAttribute="top" secondItem="Zw9-DZ-Xtf" secondAttribute="bottom" constant="10.5" id="RSE-7l-uK1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MSm-Vw-ONr" secondAttribute="trailing" constant="55" id="RTz-uO-nK5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aIC-tn-5Is" secondAttribute="trailing" constant="25" id="VUG-8s-nuN"/>
+                            <constraint firstItem="fO9-7M-YNb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="WXM-2z-UVb"/>
+                            <constraint firstItem="aIC-tn-5Is" firstAttribute="top" secondItem="fO9-7M-YNb" secondAttribute="bottom" constant="8" symbolic="YES" id="ZvP-6u-I8D"/>
+                            <constraint firstItem="fO9-7M-YNb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="exp-La-HfM"/>
+                            <constraint firstItem="aIC-tn-5Is" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="iHg-wL-dqh"/>
+                            <constraint firstItem="Zw9-DZ-Xtf" firstAttribute="top" secondItem="MSm-Vw-ONr" secondAttribute="bottom" constant="20.5" id="l1B-c3-oO1"/>
+                            <constraint firstItem="MSm-Vw-ONr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="nD5-zr-cr2"/>
+                            <constraint firstItem="CSo-mH-1WQ" firstAttribute="top" secondItem="sKK-AI-RIj" secondAttribute="bottom" constant="20.5" id="njO-fQ-bYk"/>
+                            <constraint firstItem="sKK-AI-RIj" firstAttribute="baseline" secondItem="Q0F-FX-QXj" secondAttribute="baseline" id="o1V-6h-OwJ"/>
+                            <constraint firstItem="fO9-7M-YNb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="pcp-Xj-4Lx"/>
+                            <constraint firstItem="Zw9-DZ-Xtf" firstAttribute="leading" secondItem="sKK-AI-RIj" secondAttribute="trailing" constant="-41" id="wBd-cd-TIl"/>
+                            <constraint firstItem="CSo-mH-1WQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zOw-yP-xhy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9sJ-LZ-dJj"/>
+                                <exclude reference="exp-La-HfM"/>
+                                <exclude reference="pcp-Xj-4Lx"/>
+                                <exclude reference="5b3-K1-iol"/>
+                                <exclude reference="NXL-pL-Uov"/>
+                                <exclude reference="AB7-7L-C2d"/>
+                                <exclude reference="RSE-7l-uK1"/>
+                                <exclude reference="29b-a3-NbV"/>
+                                <exclude reference="l1B-c3-oO1"/>
+                                <exclude reference="4Me-Tl-10Y"/>
+                                <exclude reference="njO-fQ-bYk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="exp-La-HfM"/>
+                                <include reference="5b3-K1-iol"/>
+                                <include reference="RSE-7l-uK1"/>
+                                <include reference="29b-a3-NbV"/>
+                                <include reference="4Me-Tl-10Y"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="pcp-Xj-4Lx"/>
+                                <include reference="NXL-pL-Uov"/>
+                                <include reference="AB7-7L-C2d"/>
+                                <include reference="l1B-c3-oO1"/>
+                                <include reference="njO-fQ-bYk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="9sJ-LZ-dJj"/>
+                                <include reference="NXL-pL-Uov"/>
+                                <include reference="AB7-7L-C2d"/>
+                                <include reference="l1B-c3-oO1"/>
+                                <include reference="njO-fQ-bYk"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outlet property="descriptionLabel" destination="aIC-tn-5Is" id="t92-gk-kYV"/>
+                            <outlet property="eraseAllButton" destination="CSo-mH-1WQ" id="GkX-FQ-ssC"/>
+                            <outlet property="settingsLabel" destination="MSm-Vw-ONr" id="WOP-V4-nF1"/>
+                            <outlet property="titleLabel" destination="fO9-7M-YNb" id="BRn-fp-ASY"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Главная" id="9wd-Pb-Kdq"/>
+                    <tabBarItem key="tabBarItem" title="Главная" image="house" catalog="system" id="9wd-Pb-Kdq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,10 +254,10 @@
                         <viewLayoutGuide key="safeArea" id="HIz-eQ-Kua"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1Gf-cN-OXp" firstAttribute="top" secondItem="HIz-eQ-Kua" secondAttribute="top" id="1hg-lQ-vhu"/>
-                            <constraint firstItem="HIz-eQ-Kua" firstAttribute="trailing" secondItem="1Gf-cN-OXp" secondAttribute="trailing" id="36p-Nt-lik"/>
-                            <constraint firstItem="HIz-eQ-Kua" firstAttribute="bottom" secondItem="1Gf-cN-OXp" secondAttribute="bottom" id="oYr-b4-PJg"/>
-                            <constraint firstItem="1Gf-cN-OXp" firstAttribute="leading" secondItem="HIz-eQ-Kua" secondAttribute="leading" id="ohQ-WV-bO1"/>
+                            <constraint firstItem="1Gf-cN-OXp" firstAttribute="top" secondItem="HIz-eQ-Kua" secondAttribute="top" id="7ip-ev-vaL"/>
+                            <constraint firstItem="1Gf-cN-OXp" firstAttribute="trailing" secondItem="HIz-eQ-Kua" secondAttribute="trailing" id="DZv-l1-aH7"/>
+                            <constraint firstItem="1Gf-cN-OXp" firstAttribute="leading" secondItem="HIz-eQ-Kua" secondAttribute="leading" id="Qhc-6r-IKm"/>
+                            <constraint firstItem="1Gf-cN-OXp" firstAttribute="bottom" secondItem="HIz-eQ-Kua" secondAttribute="bottom" id="wZe-4o-WaC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vdQ-nA-JvN"/>
@@ -363,7 +484,7 @@
         <scene sceneID="aru-CC-vOb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x8m-BO-ObG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Штрафы" id="4uP-XD-eRp"/>
+                    <tabBarItem key="tabBarItem" title="Штрафы" image="tengesign.square" catalog="system" id="4uP-XD-eRp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PyR-RP-JJ0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -382,7 +503,7 @@
         <scene sceneID="Upj-ai-cbq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vMD-yo-Trq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Учет ТС" id="zBd-O9-cBc"/>
+                    <tabBarItem key="tabBarItem" title="Учет ТС" image="car.2" catalog="system" id="zBd-O9-cBc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3nO-GS-V5g">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -401,7 +522,7 @@
         <scene sceneID="Zi6-Xt-Rq9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MuF-r1-8Dd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Заметки" id="6dn-TO-on4"/>
+                    <tabBarItem key="tabBarItem" title="Заметки" image="note.text" catalog="system" id="6dn-TO-on4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="liS-c1-JS0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -420,7 +541,7 @@
         <scene sceneID="Mmi-IO-g2U">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="emJ-ac-dwv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Карта" id="oOp-vz-EMV"/>
+                    <tabBarItem key="tabBarItem" title="Карта" image="map" catalog="system" id="oOp-vz-EMV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IvG-kU-E3G">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1138,13 +1259,22 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="car.2" catalog="system" width="128" height="72"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="note.text" catalog="system" width="128" height="106"/>
         <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="tengesign.square" catalog="system" width="128" height="114"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <image name="xmark.rectangle" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

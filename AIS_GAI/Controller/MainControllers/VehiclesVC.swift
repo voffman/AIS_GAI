@@ -22,7 +22,7 @@ class VehiclesVC: UIViewController {
     let results = try! Realm().objects(VehicleModel.self).sorted(byKeyPath: "protocolDate", ascending: false)
     
     var notificationToken: NotificationToken?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -68,7 +68,7 @@ extension VehiclesVC: UITableViewDelegate, UITableViewDataSource{
         let object = results[indexPath.row]
         cell.vehicleTitleLabel.text = object.registrationPlate
         cell.vehicleDateLabel.text = dateManager.convertDateToString(date: object.protocolDate)
-
+        
         return cell
     }
     
@@ -96,6 +96,7 @@ extension VehiclesVC: UITableViewDelegate, UITableViewDataSource{
                 receiverVC?.vehicleModel.ownershipDocument = object.ownershipDocument
                 receiverVC?.vehicleModel.taxPaymentCert = object.taxPaymentCert
                 receiverVC?.vehicleModel.addressDocument = object.addressDocument
+                receiverVC?.isCanSave = false
             }
         }
     }

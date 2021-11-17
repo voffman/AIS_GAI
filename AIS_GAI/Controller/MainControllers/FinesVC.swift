@@ -15,7 +15,6 @@ class FinesVC: UIViewController {
         return (view as! FinesView)
     }
     
-    
     let dateManager = DateManager()
     
     let realm = try! Realm()
@@ -92,6 +91,7 @@ extension FinesVC: UITableViewDelegate, UITableViewDataSource{
                 receiverVC?.fineModel.driverLicenseNumber = object.driverLicenseNumber
                 receiverVC?.fineModel.photo = object.photo
                 receiverVC?.fineModel.specialMark = object.specialMark
+                receiverVC?.isCanSave = false
             }
         }
     }
