@@ -12,8 +12,18 @@ Swift, UIKit, MVC.
 Заметки - можно добавлять, читать, редактировать, удалять записи
 
 Скриншоты:
+
+Главный экран
 <a href="https://ibb.co/kDNw57H"><img src="https://i.ibb.co/YdH1PCR/1.png" alt="1" border="0"></a>
 
-https://ibb.co/kDNw57H
+Меню добавления записи штрафа
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/RbKfWtp/2.png" alt="2" border="0"></a>
 
+Меню добавления записи ТС
+<a href="https://ibb.co/TrkB7jv"><img src="https://i.ibb.co/QXfFTSb/4.png" alt="4" border="0"></a>
 
+Возможность удаление записи
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Y73g5fJ/7.png" alt="7" border="0"></a>
+
+Предупреждение при нажатии на кнопку удаления всех выбранных записей
+<a href="https://ibb.co/ZfDWvCP"><img src="https://i.ibb.co/NFBZfzP/8.png" alt="8" border="0"></a>
