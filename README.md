@@ -14,6 +14,7 @@ Swift, UIKit, MVC.
 Скриншоты:
 
 Главный экран
+
 <a href="https://ibb.co/kDNw57H"><img src="https://i.ibb.co/YdH1PCR/1.png" alt="1" border="0"></a>
 
 Меню добавления записи штрафа
