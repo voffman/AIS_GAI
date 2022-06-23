@@ -1,5 +1,5 @@
 # AIS_GAI
-Курсовая работа на тему: АИС ГАИ (автоматизированная информационная система ГАИ).
+Курсовая работа на тему: АИС ГАИ (автоматизированная информационная система ГАИ). 2021 год.
 
 Swift, UIKit (Storyboard), MVC.
 Для работы с базой данных используется Realm, соответственно для запуска надо установить Realm.
@@ -13,6 +13,7 @@ Swift, UIKit (Storyboard), MVC.
 
 Скриншоты:
 
+<center>
 Главный экран
 
 <a href="https://ibb.co/kDNw57H"><img src="https://i.ibb.co/YdH1PCR/1.png" alt="1" border="0"></a>
@@ -32,3 +33,4 @@ Swift, UIKit (Storyboard), MVC.
 Предупреждение при нажатии на кнопку удаления всех выбранных записей
 
 <a href="https://ibb.co/ZfDWvCP"><img src="https://i.ibb.co/NFBZfzP/8.png" alt="8" border="0"></a>
+</center>
